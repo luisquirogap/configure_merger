@@ -1,0 +1,54 @@
+Ascii_file_data
+0 0 0 0 0 0 
+0.0 0.0 0.0 0.0 0.0 0.0
+0.0
+0.0
+0
+0
+0 0 0 0 0 0 0
+0
+0
+0.0
+0.0
+0.0
+0.0
+0
+0
+0 0 0 0 0 0
+0
+
+# The first line is the name of a file in ascii with data to bulid the type 1 gadget file
+# the order of the ascii data blocks should be equal to the types of particles of gadget
+# 0, 1, 2, 3, 4 or 5 , the columns should be correspond to:
+
+# id x y z vx vy vz mass internal_energy for type 0
+# id x y z vx vy vz mass for other types
+
+# The rest of number correspond to the quantities that fill the header for a snapshot of gadget
+# with the follow data structure:
+ 
+#  int Npart[6];
+#  double mass[6];
+#  double time;
+#  double   redshift;
+#  int      flag_sfr;
+#  int      flag_feedback;
+#  unsigned int npartTotal[6];
+#  int      flag_cooling;
+#  int      num_files;
+#  double   BoxSize;
+#  double   Omega0;
+#  double   OmegaLambda;
+#  double   HubbleParam; 
+#  int flag_stellarage;
+#  int flag_metals;
+#  unsigned int npartTotalHighWord[6];
+#  int  flag_entropy_instead_u;
+#  char     fill[256 - 6*4 - 6*8 - 2*8 - 2*4 - 6*4 - 2*4 - 4*8 - 2*4 - 6*4 - 1*4];  /* fills to 256 Bytes */
+
+# If some component of header vector mass is different to zero, the column of mass for that type 
+# of particle should not be in ascii data, see gadget user guide for more clearity of this and the other
+# information. 
+
+# If the user wants that the mass per particle of any component is the same for all, the column of masses
+# should be fill of zeros, but the its component in the masses vector should be major than zero.

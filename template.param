@@ -1,0 +1,34 @@
+2
+merger.gad
+header.txt
+galaxy1
+1000
+0.0 0.0 0.0
+0.0 0.0 0.0
+0
+0.0 0.0
+0 1 2 3 4 5
+galaxy2
+1500
+0.0 0.0 0.0
+0.0 0.0 0.0
+0
+0.0 0.0
+0 1 2 3 4 5
+
+# Parameters :
+# Number of galaxies to configure (int)
+# Name of output file with initial conditios (string)
+# Name of file with header (header of gadget) for the initial consitions file 
+
+# Information blocks for each galaxy:
+
+# Name with the file in bynary (gadget format 1) for each galaxy (string)
+# Particles number in the galaxy
+# X, Y and Z for final position of the galaxy ( 3 doubles)
+# Vx, Vy and Vz for final velocity of the galaxy ( 3 doubles)
+# Flag for rotation, 1 for rotation on or 0 otherwise (int)
+# Angles for rotation (2 doubles)
+# Position final of its components in gadget type for initial conditions (6 int)
+
+
